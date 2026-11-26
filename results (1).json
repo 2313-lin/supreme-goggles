@@ -1,0 +1,1058 @@
+{
+  "summary": {
+    "started_at": "2026-11-26T00:10:58+08:00",
+    "duration_s": 5.22,
+    "experiments": 16,
+    "checks": 107,
+    "passed": 107,
+    "failed": 0,
+    "python": "3.10.2",
+    "base_url": "http://127.0.0.1:5314"
+  },
+  "experiments": [
+    {
+      "id": "E1",
+      "name": "冷启动、语料与配置",
+      "checks": [
+        {
+          "name": "健康接口 200",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "name": "服务状态 ok",
+          "expected": "ok",
+          "actual": "ok",
+          "pass": true
+        },
+        {
+          "name": "作品数 20",
+          "expected": 20,
+          "actual": 20,
+          "pass": true
+        },
+        {
+          "name": "小说 12 部",
+          "expected": 12,
+          "actual": 12,
+          "pass": true
+        },
+        {
+          "name": "短剧 8 部",
+          "expected": 8,
+          "actual": 8,
+          "pass": true
+        },
+        {
+          "name": "句子/台词 43 条",
+          "expected": 43,
+          "actual": 43,
+          "pass": true
+        },
+        {
+          "name": "其中短剧台词 16 条",
+          "expected": 16,
+          "actual": 16,
+          "pass": true
+        },
+        {
+          "name": "平台注册 10 个",
+          "expected": 10,
+          "actual": 10,
+          "pass": true
+        },
+        {
+          "name": "统计接口可用",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "name": "配置预算 1500ms",
+          "expected": 1500,
+          "actual": 1500,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "corpus": {
+          "works": 20,
+          "novels": 12,
+          "dramas": 8,
+          "sentences": 43,
+          "lines": 16,
+          "characters": 31,
+          "themes": 24,
+          "platforms": 9
+        },
+        "platforms_healthy": 8
+      },
+      "notes": []
+    },
+    {
+      "id": "E2",
+      "name": "意图识别与分层排序矩阵",
+      "checks": [
+        {
+          "name": "她说她从来没有恨过我，只是不想再见到我 → 首条作品",
+          "expected": "长夜将明",
+          "actual": "长夜将明",
+          "pass": true
+        },
+        {
+          "name": "她说她从来没有恨过我，只是不想再见到我 → 层级",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "name": "她说她从来没有恨过我，只是不想再见到我 → 来源标签",
+          "expected": "原文句子命中",
+          "actual": "原文句子命中",
+          "pass": true
+        },
+        {
+          "name": "林昭 → 首条作品",
+          "expected": "长夜将明",
+          "actual": "长夜将明",
+          "pass": true
+        },
+        {
+          "name": "林昭 → 层级",
+          "expected": 2,
+          "actual": 2,
+          "pass": true
+        },
+        {
+          "name": "林昭 → 来源标签",
+          "expected": "主角/角色命中",
+          "actual": "主角/角色命中",
+          "pass": true
+        },
+        {
+          "name": "侯府嫡女 → 首条作品",
+          "expected": "侯府嫡女不好惹",
+          "actual": "侯府嫡女不好惹",
+          "pass": true
+        },
+        {
+          "name": "侯府嫡女 → 层级",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "name": "侯府嫡女 → 来源标签",
+          "expected": "标题精确命中",
+          "actual": "标题精确命中",
+          "pass": true
+        },
+        {
+          "name": "cyj → 首条作品",
+          "expected": "长夜将明",
+          "actual": "长夜将明",
+          "pass": true
+        },
+        {
+          "name": "cyj → 层级",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "name": "cyj → 来源标签",
+          "expected": "标题精确命中",
+          "actual": "标题精确命中",
+          "pass": true
+        },
+        {
+          "name": "闪婚 → 首条作品",
+          "expected": "闪婚后，傅先生每天都在吃醋",
+          "actual": "闪婚后，傅先生每天都在吃醋",
+          "pass": true
+        },
+        {
+          "name": "闪婚 → 层级",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "name": "闪婚 → 来源标签",
+          "expected": "剧名近似",
+          "actual": "剧名近似",
+          "pass": true
+        },
+        {
+          "name": "念念，你跑什么？我又不会吃了你 → 首条作品",
+          "expected": "闪婚后，傅先生每天都在吃醋",
+          "actual": "闪婚后，傅先生每天都在吃醋",
+          "pass": true
+        },
+        {
+          "name": "念念，你跑什么？我又不会吃了你 → 层级",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "name": "念念，你跑什么？我又不会吃了你 → 来源标签",
+          "expected": "台词精确命中",
+          "actual": "台词精确命中",
+          "pass": true
+        },
+        {
+          "name": "傅宴 → 首条作品",
+          "expected": "闪婚后，傅先生每天都在吃醋",
+          "actual": "闪婚后，傅先生每天都在吃醋",
+          "pass": true
+        },
+        {
+          "name": "傅宴 → 层级",
+          "expected": 6,
+          "actual": 6,
+          "pass": true
+        },
+        {
+          "name": "傅宴 → 来源标签",
+          "expected": "角色/演员命中",
+          "actual": "角色/演员命中",
+          "pass": true
+        },
+        {
+          "name": "主题查询结果数 ≥3",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "主题查询全部 layer=3",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "主题查询触发备用源",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "cases": [
+          {
+            "query": "她说她从来没有恨过我，只是不想再见到我",
+            "tab": "novel",
+            "title": "长夜将明",
+            "layer": 0,
+            "label": "原文句子命中",
+            "latency_ms": 8.8,
+            "verified": true
+          },
+          {
+            "query": "林昭",
+            "tab": "novel",
+            "title": "长夜将明",
+            "layer": 2,
+            "label": "主角/角色命中",
+            "latency_ms": 7.0,
+            "verified": true
+          },
+          {
+            "query": "侯府嫡女",
+            "tab": "novel",
+            "title": "侯府嫡女不好惹",
+            "layer": 0,
+            "label": "标题精确命中",
+            "latency_ms": 13.9,
+            "verified": true
+          },
+          {
+            "query": "cyj",
+            "tab": "novel",
+            "title": "长夜将明",
+            "layer": 0,
+            "label": "标题精确命中",
+            "latency_ms": 13.2,
+            "verified": true
+          },
+          {
+            "query": "闪婚",
+            "tab": "drama",
+            "title": "闪婚后，傅先生每天都在吃醋",
+            "layer": 1,
+            "label": "剧名近似",
+            "latency_ms": 12.5,
+            "verified": true
+          },
+          {
+            "query": "念念，你跑什么？我又不会吃了你",
+            "tab": "drama",
+            "title": "闪婚后，傅先生每天都在吃醋",
+            "layer": 0,
+            "label": "台词精确命中",
+            "latency_ms": 10.6,
+            "verified": true
+          },
+          {
+            "query": "傅宴",
+            "tab": "drama",
+            "title": "闪婚后，傅先生每天都在吃醋",
+            "layer": 6,
+            "label": "角色/演员命中",
+            "latency_ms": 12.4,
+            "verified": true
+          },
+          {
+            "query": "重生 复仇",
+            "tab": "novel",
+            "titles": [
+              "长夜将明",
+              "退婚三次后我成了首富",
+              "侯府嫡女不好惹"
+            ],
+            "expanded": true,
+            "fallback_stage": 2,
+            "latency_ms": 22.5
+          }
+        ],
+        "latency_p50_ms": 12.4,
+        "latency_max_ms": 22.5
+      },
+      "notes": []
+    },
+    {
+      "id": "E3",
+      "name": "主源（番茄）不可用 → 自动降级到七猫",
+      "checks": [
+        {
+          "name": "仍命中长夜将明",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "来源切到七猫",
+          "expected": "qimao",
+          "actual": "qimao",
+          "pass": true
+        },
+        {
+          "name": "标记降级",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "标记拓展",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "降级原因含 fanqie",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "latency_ms": 14.4,
+        "fallback_stage": 2,
+        "degraded_reasons": [
+          "fanqie 不可用（演示中平台被停用）"
+        ],
+        "platforms": [
+          {
+            "id": "agg_novel",
+            "state": "disabled",
+            "used": false
+          },
+          {
+            "id": "fanqie",
+            "state": "unavailable",
+            "used": false
+          },
+          {
+            "id": "qimao",
+            "state": "healthy",
+            "used": true
+          }
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "E4",
+      "name": "超时 → 熔断打开 → 跳过主源（预算保护）",
+      "checks": [
+        {
+          "name": "连续超时后熔断打开",
+          "expected": "open",
+          "actual": "open",
+          "pass": true
+        },
+        {
+          "name": "第 4 次查询不再耗时等主源",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "熔断后仍返回结果",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "熔断后查询标记降级",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "rounds": [
+          {
+            "state": "degraded",
+            "breaker": "closed",
+            "failures": 1,
+            "elapsed_ms": 123.4,
+            "degraded": true
+          },
+          {
+            "state": "degraded",
+            "breaker": "closed",
+            "failures": 2,
+            "elapsed_ms": 136.4,
+            "degraded": true
+          },
+          {
+            "state": "circuit_open",
+            "breaker": "open",
+            "failures": 3,
+            "elapsed_ms": 139.3,
+            "degraded": true
+          },
+          {
+            "state": "circuit_open",
+            "breaker": "open",
+            "failures": 3,
+            "elapsed_ms": 10.4,
+            "degraded": true
+          }
+        ],
+        "threshold_expected": 3,
+        "final_latency_ms": 10.4
+      },
+      "notes": []
+    },
+    {
+      "id": "E5",
+      "name": "小说主源 + 第一备用全部不可用",
+      "checks": [
+        {
+          "name": "无结果",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "name": "标记降级",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "返回原因",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "接口仍 200 正常返回",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "latency_ms": 3.2,
+        "degraded_reasons": [
+          "fanqie 不可用（演示中平台被停用）",
+          "qimao 不可用（演示中平台被停用）",
+          "结果较少（0 < 3），已尝试全部可用平台",
+          "主源结果不足，已按降级链拓展到第 4 级备用源"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "E6",
+      "name": "慢平台 + 150ms 预算：超时必有结果",
+      "checks": [
+        {
+          "name": "在预算附近返回（<500ms）",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "标记降级",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "响应含预算/超时说明",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "elapsed_ms": 185.1,
+        "budget_ms": 150,
+        "degraded_reasons": [
+          "fanqie 不可用（演示中平台被停用）",
+          "qimao 不可用（timeout: 超过单级预算）",
+          "预算耗尽，返回已召回的部分结果",
+          "结果较少（0 < 3），已尝试全部可用平台",
+          "主源结果不足，已按降级链拓展到第 2 级备用源"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "E7",
+      "name": "安全护栏：违禁、注入、鉴权、PII、限流",
+      "checks": [
+        {
+          "name": "违禁主题拒绝",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "name": "拒绝码 blocked_topic",
+          "expected": "blocked_topic",
+          "actual": "blocked_topic",
+          "pass": true
+        },
+        {
+          "name": "无凭据改平台 → 401",
+          "expected": 401,
+          "actual": 401,
+          "pass": true
+        },
+        {
+          "name": "无 confirm → 428",
+          "expected": 428,
+          "actual": 428,
+          "pass": true
+        },
+        {
+          "name": "428 错误码 need_confirmation",
+          "expected": "need_confirmation",
+          "actual": "need_confirmation",
+          "pass": true
+        },
+        {
+          "name": "注入只标记不执行",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "注入查询仍可检索",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "审计中 PII 已脱敏",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "审计不含明文手机号",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "name": "限流前两次放行",
+          "expected": [
+            true,
+            true
+          ],
+          "actual": [
+            true,
+            true
+          ],
+          "pass": true
+        },
+        {
+          "name": "第三次限流",
+          "expected": "rate_limited",
+          "actual": "rate_limited",
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "blocked_message": "该查询涉及毒品制作或交易，无法提供检索。",
+        "audit_events": 56,
+        "last_audit": {
+          "query": "[手机号] 林昭",
+          "allowed": true,
+          "results": 1,
+          "elapsed_ms": 2
+        }
+      },
+      "notes": []
+    },
+    {
+      "id": "E8",
+      "name": "长记忆：点击 → 同层排序翻转（不跨层）",
+      "checks": [
+        {
+          "name": "点击前首条为退婚三次",
+          "expected": "退婚三次后我成了首富",
+          "actual": "退婚三次后我成了首富",
+          "pass": true
+        },
+        {
+          "name": "点击后首条为侯府嫡女",
+          "expected": "侯府嫡女不好惹",
+          "actual": "侯府嫡女不好惹",
+          "pass": true
+        },
+        {
+          "name": "同层内重排（layer=3）",
+          "expected": 3,
+          "actual": 3,
+          "pass": true
+        },
+        {
+          "name": "偏好主题含重生",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "点击作品已记录",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "baseline_order": [
+          "退婚三次后我成了首富",
+          "侯府嫡女不好惹"
+        ],
+        "after_order": [
+          "侯府嫡女不好惹",
+          "退婚三次后我成了首富"
+        ],
+        "preferred_themes": [
+          "重生",
+          "古装",
+          "宅斗"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "E9",
+      "name": "并发压测：30 请求 / 10 线程",
+      "checks": [
+        {
+          "name": "30 次并发全部成功",
+          "expected": 30,
+          "actual": 30,
+          "pass": true
+        },
+        {
+          "name": "每个请求都有结果或合法空结果",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "p95 < 500ms",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "服务未崩溃（健康检查 200）",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "wall_ms": 184.5,
+        "p50_ms": 45.1,
+        "p95_ms": 93.5,
+        "max_ms": 117.6,
+        "throughput_rps": 162.6
+      },
+      "notes": []
+    },
+    {
+      "id": "E11",
+      "name": "熔断冷却 → 半开试探 → 恢复（closed）",
+      "checks": [
+        {
+          "name": "3 次超时后熔断打开",
+          "expected": "open",
+          "actual": "open",
+          "pass": true
+        },
+        {
+          "name": "冷却后半开试探成功",
+          "expected": "closed",
+          "actual": "closed",
+          "pass": true
+        },
+        {
+          "name": "成功后半开计数清零",
+          "expected": 0,
+          "actual": 0,
+          "pass": true
+        },
+        {
+          "name": "恢复后主源重新参与",
+          "expected": "fanqie",
+          "actual": "fanqie",
+          "pass": true
+        },
+        {
+          "name": "恢复后不再标记降级",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "cooldown_s": 0.4,
+        "opened_state": "open",
+        "recovered_state": "closed",
+        "recovery_latency_ms": 19.7,
+        "platform": {
+          "state": "healthy",
+          "failures": 0
+        }
+      },
+      "notes": []
+    },
+    {
+      "id": "E12",
+      "name": "半开试探失败 → 立即重开（不计入成功）",
+      "checks": [
+        {
+          "name": "再次打开熔断",
+          "expected": "open",
+          "actual": "open",
+          "pass": true
+        },
+        {
+          "name": "半开试探失败后立即重开",
+          "expected": "open",
+          "actual": "open",
+          "pass": true
+        },
+        {
+          "name": "失败计数累计到 4",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        },
+        {
+          "name": "试探失败仍正常响应",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "half_open_latency_ms": 87.1,
+        "failures_after": 4,
+        "platform_state": "circuit_open"
+      },
+      "notes": []
+    },
+    {
+      "id": "E14",
+      "name": "平台注册表热加载（保留熔断运行时状态）",
+      "checks": [
+        {
+          "name": "热加载返回 200",
+          "expected": 200,
+          "actual": 200,
+          "pass": true
+        },
+        {
+          "name": "平台数量不变",
+          "expected": 10,
+          "actual": 10,
+          "pass": true
+        },
+        {
+          "name": "熔断状态被保留",
+          "expected": "open",
+          "actual": "open",
+          "pass": true
+        },
+        {
+          "name": "失败计数被保留",
+          "expected": 4,
+          "actual": 4,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "platforms": 10,
+        "breaker_before": "open",
+        "breaker_after": "open",
+        "failures": 4
+      },
+      "notes": []
+    },
+    {
+      "id": "E13",
+      "name": "真实 HTTP 适配器联调（本地假平台 + 故障回落）",
+      "checks": [
+        {
+          "name": "真实 HTTP 召回成功",
+          "expected": "长夜将明（镜像）",
+          "actual": "长夜将明（镜像）",
+          "pass": true
+        },
+        {
+          "name": "来源标记为接入平台",
+          "expected": "fanqie",
+          "actual": "fanqie",
+          "pass": true
+        },
+        {
+          "name": "通道映射生效",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "中文查询正确编码",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "正常路径不降级",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        },
+        {
+          "name": "HTTP 500 触发熔断",
+          "expected": "circuit_open",
+          "actual": "circuit_open",
+          "pass": true
+        },
+        {
+          "name": "故障时回落到七猫",
+          "expected": "qimao",
+          "actual": "qimao",
+          "pass": true
+        },
+        {
+          "name": "故障时返回本地作品",
+          "expected": "长夜将明",
+          "actual": "长夜将明",
+          "pass": true
+        },
+        {
+          "name": "故障时标记降级",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "adapter": "http_json",
+        "mock_base_url": "http://127.0.0.1:53799",
+        "first_call_latency_ms": 15.7,
+        "rounds": [
+          {
+            "state": "degraded",
+            "breaker": "closed",
+            "failures": 1
+          },
+          {
+            "state": "degraded",
+            "breaker": "closed",
+            "failures": 2
+          },
+          {
+            "state": "circuit_open",
+            "breaker": "open",
+            "failures": 3
+          },
+          {
+            "state": "circuit_open",
+            "breaker": "open",
+            "failures": 3
+          }
+        ],
+        "fallback_platform": "qimao"
+      },
+      "notes": []
+    },
+    {
+      "id": "E15",
+      "name": "半开并发冲击：只放行一个试探",
+      "checks": [
+        {
+          "name": "8 个并发只有 1 个进入半开试探",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        },
+        {
+          "name": "其余 7 个请求跳过主源",
+          "expected": 7,
+          "actual": 7,
+          "pass": true
+        },
+        {
+          "name": "跳过原因标注半开试探",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "试探成功后熔断关闭",
+          "expected": "closed",
+          "actual": "closed",
+          "pass": true
+        },
+        {
+          "name": "主源实际只被调用 1 次",
+          "expected": 1,
+          "actual": 1,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "cooldown_s": 0.4,
+        "concurrent_requests": 8,
+        "admitted": 1,
+        "fanqie_calls_delta": 1,
+        "opened_state": "open",
+        "final_state": "closed",
+        "skip_reasons": [
+          "半开试探进行中，跳过"
+        ]
+      },
+      "notes": []
+    },
+    {
+      "id": "E16",
+      "name": "恢复后并发放行（closed 状态）",
+      "checks": [
+        {
+          "name": "恢复后 6 个并发全部放行",
+          "expected": 6,
+          "actual": 6,
+          "pass": true
+        },
+        {
+          "name": "全部正常响应",
+          "expected": 6,
+          "actual": 6,
+          "pass": true
+        },
+        {
+          "name": "状态保持 closed",
+          "expected": "closed",
+          "actual": "closed",
+          "pass": true
+        },
+        {
+          "name": "p95 < 300ms",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "concurrent_requests": 6,
+        "admitted": 6,
+        "p50_ms": 19.0,
+        "p95_ms": 22.5,
+        "final_state": "closed"
+      },
+      "notes": []
+    },
+    {
+      "id": "E10",
+      "name": "审计完整性",
+      "checks": [
+        {
+          "name": "搜索请求数",
+          "expected": 80,
+          "actual": 80,
+          "pass": true
+        },
+        {
+          "name": "审计搜索事件数与请求数一致",
+          "expected": 80,
+          "actual": 80,
+          "pass": true
+        },
+        {
+          "name": "每条搜索都有 trace_id",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "含耗时字段",
+          "expected": true,
+          "actual": true,
+          "pass": true
+        },
+        {
+          "name": "审计接口可用",
+          "expected": 5,
+          "actual": 5,
+          "pass": true
+        },
+        {
+          "name": "无明文手机号",
+          "expected": false,
+          "actual": false,
+          "pass": true
+        }
+      ],
+      "metrics": {
+        "total_events": 149,
+        "search_events": 80,
+        "expected_searches": 80,
+        "flush_wait_ms": 0.0,
+        "degraded_events": 28,
+        "last": {
+          "trace_id": "0c400c5d3ecd",
+          "query": "林昭",
+          "results": 1,
+          "elapsed_ms": 9
+        }
+      },
+      "notes": []
+    }
+  ]
+}

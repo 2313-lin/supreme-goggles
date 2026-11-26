@@ -1,0 +1,15 @@
+{
+  "host": "127.0.0.1",
+  "port": 8765,
+  "budget_ms": 1500,
+  "min_results": 3,
+  "max_results_per_group": 10,
+  "max_results_all": 8,
+  "max_query_chars": 200,
+  "rate_limit_per_min": 60,
+  "session_ttl_days": 7,
+  "cache_ttl_s": 30,
+  "cache_max_entries": 256,
+  "llm_rerank": false,
+  "llm_timeout_ms": 600
+}

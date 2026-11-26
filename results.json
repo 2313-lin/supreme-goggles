@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "started_at": "2026-11-26T00:10:37+08:00",
+    "mode": "mock",
+    "checks": 8,
+    "passed": 8,
+    "failed": 0,
+    "endpoint": "local mock"
+  },
+  "checks": [
+    {
+      "name": "端到端命中 dracin",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "映射出集数",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "通道为剧名命中",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "首次耗时在预算内",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "缓存后端可用",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "二次命中更快",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "鉴权失败触发熔断",
+      "expected": "circuit_open",
+      "actual": "circuit_open",
+      "pass": true
+    },
+    {
+      "name": "mock 收到 Bearer 头",
+      "expected": "Bearer test-key",
+      "actual": "Bearer test-key",
+      "pass": true
+    }
+  ]
+}

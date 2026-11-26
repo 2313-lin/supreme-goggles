@@ -1,0 +1,527 @@
+{
+  "_comment": "演示语料：全部为虚构作品与台词，仅用于跑通检索闭环；平台链接为演示地址，不指向真实内容。",
+  "themes": [
+    {"id": "t_rebirth", "name": "重生", "aliases": ["重活一世"], "category": "爽感"},
+    {"id": "t_revenge", "name": "复仇", "aliases": ["报仇"], "category": "爽感"},
+    {"id": "t_suspense", "name": "悬疑", "aliases": ["推理"], "category": "题材"},
+    {"id": "t_sweet", "name": "甜宠", "aliases": ["宠文"], "category": "情感"},
+    {"id": "t_flash", "name": "闪婚", "aliases": ["先婚后爱"], "category": "情感"},
+    {"id": "t_rich", "name": "豪门", "aliases": ["世家"], "category": "情感"},
+    {"id": "t_angst", "name": "虐恋", "aliases": ["虐心"], "category": "情感"},
+    {"id": "t_chase", "name": "追妻火葬场", "aliases": ["追妻"], "category": "情感"},
+    {"id": "t_era", "name": "年代", "aliases": ["八零", "九零"], "category": "题材"},
+    {"id": "t_farm", "name": "种田", "aliases": ["种田文"], "category": "题材"},
+    {"id": "t_apocalypse", "name": "末世", "aliases": ["末日"], "category": "题材"},
+    {"id": "t_ancient", "name": "古装", "aliases": ["古言"], "category": "题材"},
+    {"id": "t_travel", "name": "穿越", "aliases": [], "category": "题材"},
+    {"id": "t_school", "name": "校园", "aliases": [], "category": "题材"},
+    {"id": "t_crush", "name": "暗恋", "aliases": [], "category": "情感"},
+    {"id": "t_fortune", "name": "玄学", "aliases": ["算命"], "category": "题材"},
+    {"id": "t_scifi", "name": "科幻", "aliases": [], "category": "题材"},
+    {"id": "t_heal", "name": "治愈", "aliases": ["温情"], "category": "情感"},
+    {"id": "t_city", "name": "都市", "aliases": [], "category": "题材"},
+    {"id": "t_shuang", "name": "爽文", "aliases": ["打脸"], "category": "爽感"},
+    {"id": "t_house", "name": "宅斗", "aliases": [], "category": "题材"},
+    {"id": "t_family", "name": "家庭", "aliases": [], "category": "题材"},
+    {"id": "t_horror", "name": "灵异", "aliases": [], "category": "题材"},
+    {"id": "t_standin", "name": "替身", "aliases": [], "category": "情感"}
+  ],
+  "works": [
+    {
+      "id": "n_changye",
+      "type": "novel",
+      "title": "长夜将明",
+      "aliases": ["长夜将明：复仇者"],
+      "author": "沈砚",
+      "pinyin": "chang ye jiang ming",
+      "year": 2024,
+      "popularity": 0.93,
+      "summary": "一场纵火案让林家一夜倾覆。十年后，改名换姓的林昭回到这座城，只为查清当年那把火是谁点的。",
+      "themes": ["悬疑", "复仇"],
+      "tags": ["双强", "渐热", "都市"],
+      "cover": "",
+      "sources": [
+        {"platform": "fanqie", "url": "https://fanqienovel.com/page/demo-n-changye", "tier": "primary", "content_level": "L3"},
+        {"platform": "qimao", "url": "https://www.qimao.com/shuku/demo-n-changye", "tier": "backup", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "林昭", "aliases": ["昭昭", "林律师"], "role": "主角", "importance": 0.95, "pinyin": "lin zhao", "description": "前刑辩律师，冷静克制，回城只为复仇。"},
+        {"name": "周砚", "aliases": ["周队"], "role": "主角", "importance": 0.9, "pinyin": "zhou yan", "description": "刑警队长，十年前那场火的目击者。"},
+        {"name": "林正雄", "aliases": [], "role": "反派", "importance": 0.7, "pinyin": "lin zheng xiong", "description": "林昭的叔父，当年火灾的受益者。"}
+      ],
+      "sentences": [
+        {"type": "dialogue", "text": "她说她从来没有恨过我，只是不想再见到我。", "position": "第3章 第2段"},
+        {"type": "narration", "text": "长夜将明，有些人却永远留在了黑里。", "position": "第27章 结尾"},
+        {"type": "dialogue", "text": "那把火烧掉的不只是房子，还有我们所有人的退路。", "position": "第11章 第5段"}
+      ]
+    },
+    {
+      "id": "n_tuihun",
+      "type": "novel",
+      "title": "退婚三次后我成了首富",
+      "aliases": ["退婚三次"],
+      "author": "顾南枝",
+      "pinyin": "tui hun san ci hou wo cheng le shou fu",
+      "year": 2025,
+      "popularity": 0.88,
+      "summary": "被退婚三次的苏晚，转身接下了家里濒临破产的厂子，三年后她的名字出现在财经杂志封面。",
+      "themes": ["重生", "爽文", "都市"],
+      "tags": ["女强", "打脸", "创业"],
+      "cover": "",
+      "sources": [
+        {"platform": "fanqie", "url": "https://fanqienovel.com/page/demo-n-tuihun", "tier": "primary", "content_level": "L3"}
+      ],
+      "characters": [
+        {"name": "苏晚", "aliases": ["晚晚"], "role": "主角", "importance": 0.95, "pinyin": "su wan", "description": "重生回到二十岁，决定不再为任何人委屈自己。"},
+        {"name": "陆峥", "aliases": [], "role": "主角", "importance": 0.85, "pinyin": "lu zheng", "description": "投资人，最早看懂苏晚的人。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "苏晚把婚书撕成两半，转身走进了雨里。", "position": "第1章 第3段"},
+        {"type": "dialogue", "text": "这一次，我要为自己活。", "position": "第2章 第1段"},
+        {"type": "narration", "text": "三年后，财经杂志的封面写着她的名字。", "position": "第40章 结尾"}
+      ]
+    },
+    {
+      "id": "n_binyiguan",
+      "type": "novel",
+      "title": "我在殡仪馆当守夜人",
+      "aliases": ["守夜人"],
+      "author": "陈默",
+      "pinyin": "wo zai bin yi guan dang shou ye ren",
+      "year": 2023,
+      "popularity": 0.81,
+      "summary": "城郊殡仪馆的夜班守夜人陈默，见过太多来不及说出口的告别，也见过不该出现在这里的人。",
+      "themes": ["悬疑", "灵异"],
+      "tags": ["单元剧", "人性", "微恐"],
+      "cover": "",
+      "sources": [
+        {"platform": "fanqie", "url": "https://fanqienovel.com/page/demo-n-binyiguan", "tier": "primary", "content_level": "L3"}
+      ],
+      "characters": [
+        {"name": "陈默", "aliases": ["老陈"], "role": "主角", "importance": 0.92, "pinyin": "chen mo", "description": "殡仪馆守夜人，沉默寡言，能听见死者最后的念叨。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "他总说，死人比活人更讲道理。", "position": "第1章 第1段"},
+        {"type": "dialogue", "text": "你走的时候，记得把灯留着。", "position": "第5章 第4段"},
+        {"type": "narration", "text": "凌晨三点，停尸间的门自己开了一条缝。", "position": "第9章 开头"}
+      ]
+    },
+    {
+      "id": "n_bashi",
+      "type": "novel",
+      "title": "八十年代小娇妻",
+      "aliases": ["八零小娇妻"],
+      "author": "何秀兰",
+      "pinyin": "ba shi nian dai xiao jiao qi",
+      "year": 2022,
+      "popularity": 0.76,
+      "summary": "一九八三年的冬天，何秀兰嫁给了村里最不会说话的兵，日子穷得响叮当，却把两个人的心焐热了。",
+      "themes": ["年代", "甜宠"],
+      "tags": ["细水长流", "婚后", "成长"],
+      "cover": "",
+      "sources": [
+        {"platform": "fanqie", "url": "https://fanqienovel.com/page/demo-n-bashi", "tier": "primary", "content_level": "L3"}
+      ],
+      "characters": [
+        {"name": "何秀兰", "aliases": ["秀兰"], "role": "主角", "importance": 0.9, "pinyin": "he xiu lan", "description": "嘴硬心软的农村姑娘。"},
+        {"name": "傅北辰", "aliases": ["老傅"], "role": "主角", "importance": 0.88, "pinyin": "fu bei chen", "description": "退伍军人，话少，会偷偷给媳妇攒糖。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "那年冬天，他用半个月工资给她买了一双红棉鞋。", "position": "第6章 第2段"},
+        {"type": "dialogue", "text": "日子再难，我也没想过把你一个人撂下。", "position": "第14章 第3段"}
+      ]
+    },
+    {
+      "id": "n_lihun",
+      "type": "novel",
+      "title": "离婚后她惊艳了全世界",
+      "aliases": ["离婚后"],
+      "author": "江予白",
+      "pinyin": "li hun hou ta jing yan le quan shi jie",
+      "year": 2025,
+      "popularity": 0.9,
+      "summary": "顾念做了五年全职太太，离婚那天她重新拿起画笔。半年后，国际画廊的邀请函寄到了前夫的办公室。",
+      "themes": ["都市", "追妻火葬场"],
+      "tags": ["婚后", "女强", "打脸"],
+      "cover": "",
+      "sources": [
+        {"platform": "fanqie", "url": "https://fanqienovel.com/page/demo-n-lihun", "tier": "primary", "content_level": "L3"}
+      ],
+      "characters": [
+        {"name": "顾念", "aliases": ["念念"], "role": "主角", "importance": 0.94, "pinyin": "gu nian", "description": "被婚姻耽误的画家。"},
+        {"name": "江予白", "aliases": ["江总"], "role": "主角", "importance": 0.9, "pinyin": "jiang yu bai", "description": "前夫，习惯用物质衡量一切。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "离婚协议签完那天，她删掉了他所有的联系方式。", "position": "第1章 结尾"},
+        {"type": "dialogue", "text": "江予白，你看清楚，现在是我不要你了。", "position": "第18章 第2段"}
+      ]
+    },
+    {
+      "id": "n_beicheng",
+      "type": "novel",
+      "title": "北城有雪",
+      "aliases": ["北城的雪"],
+      "author": "温言",
+      "pinyin": "bei cheng you xue",
+      "year": 2023,
+      "popularity": 0.79,
+      "summary": "温言和陆时衍分开七年，再次相遇在北城最冷的一场雪里。有些话，隔了七年还是说不出口。",
+      "themes": ["虐恋", "都市"],
+      "tags": ["破镜重圆", "久别重逢", "双向奔赴"],
+      "cover": "",
+      "sources": [
+        {"platform": "qimao", "url": "https://www.qimao.com/shuku/demo-n-beicheng", "tier": "primary", "content_level": "L2"},
+        {"platform": "shuqi", "url": "https://www.shuqi.com/demo-n-beicheng", "tier": "backup", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "温言", "aliases": [], "role": "主角", "importance": 0.92, "pinyin": "wen yan", "description": "记者，习惯把心事写进采访本。"},
+        {"name": "陆时衍", "aliases": ["陆先生"], "role": "主角", "importance": 0.9, "pinyin": "lu shi yan", "description": "建筑师，七年前不告而别。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "北城的雪落了一夜，他站在楼下，始终没有按响门铃。", "position": "第8章 第1段"},
+        {"type": "dialogue", "text": "我们之间隔的不是七年，是你从来没说出口的那句话。", "position": "第22章 第4段"}
+      ]
+    },
+    {
+      "id": "n_houfu",
+      "type": "novel",
+      "title": "侯府嫡女不好惹",
+      "aliases": ["侯府嫡女"],
+      "author": "沈清月",
+      "pinyin": "hou fu di nv bu hao re",
+      "year": 2024,
+      "popularity": 0.84,
+      "summary": "嫡女沈清月被继母算计了一世，重生回及笄那年，她决定先把账本拿回来，再谈婚事。",
+      "themes": ["古装", "宅斗", "重生"],
+      "tags": ["嫡女", "权谋", "打脸"],
+      "cover": "",
+      "sources": [
+        {"platform": "qimao", "url": "https://www.qimao.com/shuku/demo-n-houfu", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "沈清月", "aliases": ["清月"], "role": "主角", "importance": 0.94, "pinyin": "shen qing yue", "description": "侯府嫡女，重来一世，只信自己。"},
+        {"name": "柳氏", "aliases": [], "role": "反派", "importance": 0.6, "pinyin": "liu shi", "description": "继母，笑里藏刀。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "母亲留给她的那支银簪，里头藏着一张地契。", "position": "第4章 第2段"},
+        {"type": "dialogue", "text": "既说我不好惹，那我便不好惹给你们看。", "position": "第12章 第1段"}
+      ]
+    },
+    {
+      "id": "n_suanming",
+      "type": "novel",
+      "title": "我靠算命火爆全网",
+      "aliases": ["算命火爆全网"],
+      "author": "白苏",
+      "pinyin": "wo kao suan ming huo bao quan wang",
+      "year": 2025,
+      "popularity": 0.86,
+      "summary": "白苏在直播间随口给网友算了一卦，第二天那条预言上了热搜。找她的人越来越多，麻烦也越来越大。",
+      "themes": ["玄学", "爽文", "都市"],
+      "tags": ["直播", "单元剧", "打脸"],
+      "cover": "",
+      "sources": [
+        {"platform": "qimao", "url": "https://www.qimao.com/shuku/demo-n-suanming", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "白苏", "aliases": ["苏苏"], "role": "主角", "importance": 0.93, "pinyin": "bai su", "description": "直播间里最不按套路出牌的算命师。"}
+      ],
+      "sentences": [
+        {"type": "dialogue", "text": "她抬眼看他，只说了一句：你活不过这个月。", "position": "第3章 第2段"},
+        {"type": "narration", "text": "直播间的人数从三百涨到了三百万。", "position": "第7章 结尾"}
+      ]
+    },
+    {
+      "id": "n_shenhai",
+      "type": "novel",
+      "title": "深海回声",
+      "aliases": ["深海"],
+      "author": "程野",
+      "pinyin": "shen hai hui sheng",
+      "year": 2023,
+      "popularity": 0.74,
+      "summary": "深海科考站失联第七天，程野在声呐里听见了母亲的呼唤——他的母亲，二十年前就已经去世。",
+      "themes": ["科幻", "悬疑"],
+      "tags": ["硬核", "深海", "悬念"],
+      "cover": "",
+      "sources": [
+        {"platform": "shuqi", "url": "https://www.shuqi.com/demo-n-shenhai", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "程野", "aliases": [], "role": "主角", "importance": 0.9, "pinyin": "cheng ye", "description": "声呐工程师，理性，但无法解释自己听到的声音。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "深海没有回声，可他却听见了母亲的呼唤。", "position": "第1章 结尾"},
+        {"type": "dialogue", "text": "如果回声来自二十年前，那我们到底在听什么？", "position": "第9章 第3段"}
+      ]
+    },
+    {
+      "id": "n_caifeng",
+      "type": "novel",
+      "title": "老巷子里的裁缝铺",
+      "aliases": ["裁缝铺"],
+      "author": "阿绣",
+      "pinyin": "lao xiang zi li de cai feng pu",
+      "year": 2021,
+      "popularity": 0.68,
+      "summary": "老巷子尽头的裁缝铺开了四十年，阿绣替人改衣服，也替人把日子缝缝补补。",
+      "themes": ["治愈", "年代"],
+      "tags": ["市井", "温情", "短篇"],
+      "cover": "",
+      "sources": [
+        {"platform": "shuqi", "url": "https://www.shuqi.com/demo-n-caifeng", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "阿绣", "aliases": ["绣姨"], "role": "主角", "importance": 0.88, "pinyin": "a xiu", "description": "裁缝铺的第三代传人。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "阿绣把旧旗袍改了又改，像是要把一个人的一生缝回去。", "position": "第2章 第1段"},
+        {"type": "dialogue", "text": "衣服旧了不要紧，人别旧了心。", "position": "第6章 第2段"}
+      ]
+    },
+    {
+      "id": "n_tianliang",
+      "type": "novel",
+      "title": "天亮了，我还在等你",
+      "aliases": ["天亮了"],
+      "author": "许知夏",
+      "pinyin": "tian liang le wo hai zai deng ni",
+      "year": 2022,
+      "popularity": 0.72,
+      "summary": "许知夏喜欢陈屿喜欢了整整三年，直到毕业那天，她也没把那封信递出去。",
+      "themes": ["校园", "暗恋"],
+      "tags": ["青春", "遗憾", "短篇"],
+      "cover": "",
+      "sources": [
+        {"platform": "midu", "url": "https://www.miduread.com/demo-n-tianliang", "tier": "primary", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "许知夏", "aliases": ["知夏"], "role": "主角", "importance": 0.9, "pinyin": "xu zhi xia", "description": "安静的优等生，把喜欢藏进笔记本。"},
+        {"name": "陈屿", "aliases": [], "role": "主角", "importance": 0.85, "pinyin": "chen yu", "description": "校篮球队队长，迟钝得让人着急。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "高考结束那晚，她把写了三年的信烧了。", "position": "第12章 结尾"},
+        {"type": "dialogue", "text": "陈屿，你有没有想过，我可能不是在等你回头。", "position": "第15章 第3段"}
+      ]
+    },
+    {
+      "id": "n_jiuling",
+      "type": "novel",
+      "title": "九零之我靠种田发家",
+      "aliases": ["九零种田"],
+      "author": "李满仓",
+      "pinyin": "jiu ling zhi wo kao zhong tian fa jia",
+      "year": 2023,
+      "popularity": 0.7,
+      "summary": "李满仓承包了村里最没人要的三十亩盐碱地，全村都笑他傻，三年后这片地成了县里的示范田。",
+      "themes": ["年代", "种田"],
+      "tags": ["创业", "乡村", "爽文"],
+      "cover": "",
+      "sources": [
+        {"platform": "lianshang", "url": "https://www.lianshang.com/demo-n-jiuling", "tier": "primary", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "李满仓", "aliases": ["满仓"], "role": "主角", "importance": 0.9, "pinyin": "li man cang", "description": "回乡青年，认死理，会算账。"}
+      ],
+      "sentences": [
+        {"type": "narration", "text": "他蹲在地头，把第一把稻穗攥得紧紧的。", "position": "第5章 第2段"},
+        {"type": "dialogue", "text": "这地不骗人，你给它多少，它记多少。", "position": "第11章 第1段"}
+      ]
+    },
+    {
+      "id": "d_shanhun",
+      "type": "short_drama",
+      "title": "闪婚后，傅先生每天都在吃醋",
+      "aliases": ["闪婚傅先生", "傅先生每天吃醋"],
+      "author": "星野短剧",
+      "pinyin": "shan hun fu xian sheng mei tian dou zai chi cu",
+      "year": 2025,
+      "popularity": 0.95,
+      "summary": "为了给外婆冲喜，苏念和只见了三面的傅宴领了证。婚后她才发现，这位冷面总裁吃起醋来毫无底线。",
+      "themes": ["甜宠", "闪婚", "豪门"],
+      "tags": ["先婚后爱", "总裁", "轻松"],
+      "cover": "",
+      "sources": [
+        {"platform": "hongguo", "url": "https://www.hongguoshortplay.com/demo-d-shanhun", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "傅宴", "aliases": ["傅先生", "傅总"], "role": "主角", "importance": 0.95, "pinyin": "fu yan", "description": "冷面总裁，醋坛子本体。"},
+        {"name": "苏念", "aliases": ["念念"], "role": "主角", "importance": 0.93, "pinyin": "su nian", "description": "独立清醒的插画师。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "我们才认识三天，你凭什么管我？", "position": "第3集 04:12", "scene_id": "s3", "start_time": 252, "end_time": 257},
+        {"type": "subtitle", "text": "念念，你跑什么？我又不会吃了你。", "position": "第12集 01:23", "scene_id": "s12", "start_time": 83, "end_time": 89},
+        {"type": "subtitle", "text": "傅宴，你吃醋的样子真难看。", "position": "第20集 06:40", "scene_id": "s20", "start_time": 400, "end_time": 406}
+      ]
+    },
+    {
+      "id": "d_chongsheng",
+      "type": "short_drama",
+      "title": "重生之我在豪门当团宠",
+      "aliases": ["豪门团宠", "重生豪门"],
+      "author": "橙光短剧",
+      "pinyin": "chong sheng zhi wo zai hao men dang tuan chong",
+      "year": 2024,
+      "popularity": 0.9,
+      "summary": "被继妹推下楼梯的顾晚晚一睁眼回到了十八岁，这一次她不逃了，要当顾家最难惹的那一个。",
+      "themes": ["重生", "豪门", "爽文"],
+      "tags": ["团宠", "复仇", "打脸"],
+      "cover": "",
+      "sources": [
+        {"platform": "hongguo", "url": "https://www.hongguoshortplay.com/demo-d-chongsheng", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "顾晚晚", "aliases": ["晚晚"], "role": "主角", "importance": 0.94, "pinyin": "gu wan wan", "description": "重生归来的顾家真千金。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "上一世我瞎了眼，这一世我要你们一个个还回来。", "position": "第1集 02:10", "scene_id": "s1", "start_time": 130, "end_time": 138},
+        {"type": "subtitle", "text": "从今天起，顾家的规矩我说了算。", "position": "第8集 05:02", "scene_id": "s8", "start_time": 302, "end_time": 308}
+      ]
+    },
+    {
+      "id": "d_tishen",
+      "type": "short_drama",
+      "title": "总裁的替身新娘",
+      "aliases": ["替身新娘"],
+      "author": "麦田短剧",
+      "pinyin": "zong cai de ti shen xin niang",
+      "year": 2024,
+      "popularity": 0.85,
+      "summary": "林小满因为一张和故人相似的脸被霍廷娶进门，她以为自己是替身，直到霍廷在她面前第一次失控。",
+      "themes": ["虐恋", "豪门", "替身"],
+      "tags": ["狗血", "先婚后爱", "追妻"],
+      "cover": "",
+      "sources": [
+        {"platform": "hongguo", "url": "https://www.hongguoshortplay.com/demo-d-tishen", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "霍廷", "aliases": ["霍总"], "role": "主角", "importance": 0.92, "pinyin": "huo ting", "description": "外冷内热的集团掌权人。"},
+        {"name": "林小满", "aliases": ["小满"], "role": "主角", "importance": 0.9, "pinyin": "lin xiao man", "description": "被当成替身的女孩。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "你长得像她，但你不是她。", "position": "第5集 03:30", "scene_id": "s5", "start_time": 210, "end_time": 215},
+        {"type": "subtitle", "text": "霍廷，这一次换我不要你了。", "position": "第30集 07:12", "scene_id": "s30", "start_time": 432, "end_time": 439}
+      ]
+    },
+    {
+      "id": "d_qianadao",
+      "type": "short_drama",
+      "title": "开局签到亿万豪宅",
+      "aliases": ["签到亿万豪宅"],
+      "author": "极光短剧",
+      "pinyin": "kai ju qian dao yi wan hao zhai",
+      "year": 2025,
+      "popularity": 0.88,
+      "summary": "外卖员秦川绑定签到系统，第一天签到的奖励是汤臣一品顶层复式，第二天是限量超跑。",
+      "themes": ["爽文", "都市"],
+      "tags": ["系统", "逆袭", "轻松"],
+      "cover": "",
+      "sources": [
+        {"platform": "hongguo", "url": "https://www.hongguoshortplay.com/demo-d-qianadao", "tier": "primary", "content_level": "L2"}
+      ],
+      "characters": [
+        {"name": "秦川", "aliases": [], "role": "主角", "importance": 0.9, "pinyin": "qin chuan", "description": "意外绑定签到系统的外卖员。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "叮，签到成功，奖励汤臣一品顶层复式一套。", "position": "第1集 00:45", "scene_id": "s1", "start_time": 45, "end_time": 52},
+        {"type": "subtitle", "text": "这系统是不是有点太不讲道理了？", "position": "第2集 03:18", "scene_id": "s2", "start_time": 198, "end_time": 204}
+      ]
+    },
+    {
+      "id": "d_popo",
+      "type": "short_drama",
+      "title": "婆婆逼我离婚后，全家跪求我回头",
+      "aliases": ["全家跪求我回头"],
+      "author": "胡桃短剧",
+      "pinyin": "po po bi wo li hun hou quan jia gui qiu wo hui tou",
+      "year": 2024,
+      "popularity": 0.86,
+      "summary": "赵雅忍了三年，签下离婚协议那天她只提了一个要求：把账算清楚。",
+      "themes": ["家庭", "复仇", "都市"],
+      "tags": ["婆媳", "逆转", "爽文"],
+      "cover": "",
+      "sources": [
+        {"platform": "hema", "url": "https://www.hemajuchang.com/demo-d-popo", "tier": "primary", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "赵雅", "aliases": [], "role": "主角", "importance": 0.92, "pinyin": "zhao ya", "description": "被婆家磋磨三年的儿媳。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "离婚可以，把这三年的饭钱先结了。", "position": "第4集 02:20", "scene_id": "s4", "start_time": 140, "end_time": 147},
+        {"type": "subtitle", "text": "妈，您当初说的那些话，我一句都没忘。", "position": "第16集 05:35", "scene_id": "s16", "start_time": 335, "end_time": 342}
+      ]
+    },
+    {
+      "id": "d_bingjiao",
+      "type": "short_drama",
+      "title": "病娇王爷的小医妃",
+      "aliases": ["小医妃"],
+      "author": "青柠短剧",
+      "pinyin": "bing jiao wang ye de xiao yi fei",
+      "year": 2023,
+      "popularity": 0.8,
+      "summary": "苏青禾穿成即将被赐死的冲喜王妃，靠一手医术把病秧子王爷救了回来，也把自己救出了深宫。",
+      "themes": ["古装", "甜宠", "穿越"],
+      "tags": ["医术", "先婚后爱", "轻喜"],
+      "cover": "",
+      "sources": [
+        {"platform": "hema", "url": "https://www.hemajuchang.com/demo-d-bingjiao", "tier": "primary", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "萧景瑞", "aliases": ["王爷"], "role": "主角", "importance": 0.9, "pinyin": "xiao jing rui", "description": "体弱多病、心思深沉的王爷。"},
+        {"name": "苏青禾", "aliases": ["青禾"], "role": "主角", "importance": 0.92, "pinyin": "su qing he", "description": "穿越而来的现代医生。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "本王这条命是你救的，那就归你了。", "position": "第10集 06:05", "scene_id": "s10", "start_time": 365, "end_time": 371},
+        {"type": "subtitle", "text": "王爷，您再乱动，这针就扎偏了。", "position": "第6集 01:50", "scene_id": "s6", "start_time": 110, "end_time": 116}
+      ]
+    },
+    {
+      "id": "d_mori",
+      "type": "short_drama",
+      "title": "我在末日囤了十亿物资",
+      "aliases": ["末日囤物资"],
+      "author": "黑岩短剧",
+      "pinyin": "wo zai mo ri tun le shi yi wu zi",
+      "year": 2025,
+      "popularity": 0.87,
+      "summary": "末世前一个月，张野把所有积蓄换成了压缩饼干和净水器，邻居都笑他疯，直到第一场酸雨落下。",
+      "themes": ["末世", "爽文"],
+      "tags": ["囤货", "生存", "系统"],
+      "cover": "",
+      "sources": [
+        {"platform": "aikan", "url": "https://www.aikanju.com/demo-d-mori", "tier": "primary", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "张野", "aliases": [], "role": "主角", "importance": 0.9, "pinyin": "zhang ye", "description": "提前一个月开始囤货的普通人。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "别人囤泡面，我囤了十座仓库。", "position": "第1集 01:10", "scene_id": "s1", "start_time": 70, "end_time": 76},
+        {"type": "subtitle", "text": "现在，谁才是疯子？", "position": "第6集 04:02", "scene_id": "s6", "start_time": 242, "end_time": 247}
+      ]
+    },
+    {
+      "id": "d_nongmen",
+      "type": "short_drama",
+      "title": "穿越之农门悍妻",
+      "aliases": ["农门悍妻"],
+      "author": "聚合片库",
+      "pinyin": "chuan yue zhi nong men han qi",
+      "year": 2023,
+      "popularity": 0.66,
+      "summary": "米朵穿越成了农门里最泼辣的媳妇，第一件事就是把占了她家田的族老请出了祠堂。",
+      "themes": ["穿越", "种田", "古装"],
+      "tags": ["种田", "家常", "爽文"],
+      "cover": "",
+      "sources": [
+        {"platform": "agg_drama", "url": "https://aggregator.example.com/demo-d-nongmen", "tier": "aggregator", "content_level": "L1"}
+      ],
+      "characters": [
+        {"name": "米朵", "aliases": [], "role": "主角", "importance": 0.86, "pinyin": "mi duo", "description": "穿越而来的现代营养师。"}
+      ],
+      "sentences": [
+        {"type": "subtitle", "text": "这块地是我男人拿命换的，谁也别想动。", "position": "第3集 02:40", "scene_id": "s3", "start_time": 160, "end_time": 167}
+      ]
+    }
+  ]
+}

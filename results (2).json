@@ -1,0 +1,495 @@
+{
+  "summary": {
+    "started_at": "2026-11-25T23:43:40+08:00",
+    "duration_s": 18.8,
+    "checks": 18,
+    "passed": 18,
+    "failed": 0,
+    "endpoint": "https://api.icofun.cn/API/djpxb.php",
+    "config": "config/platforms.live.json"
+  },
+  "checks": [
+    {
+      "name": "联调配置启用 agg_drama",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "适配器为 icofun_shortdrama",
+      "expected": "icofun_shortdrama",
+      "actual": "icofun_shortdrama",
+      "pass": true
+    },
+    {
+      "name": "适配器类型正确",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "真实接口至少 3/4 查询有结果",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "端到端结果包含真实聚合源",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "≥3 个查询命中聚合源",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "聚合结果含集数元数据",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "所有请求均在预算内返回",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "句子查询不污染聚合结果",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "name": "连续失败后聚合源熔断",
+      "expected": "circuit_open",
+      "actual": "circuit_open",
+      "pass": true
+    },
+    {
+      "name": "熔断后跳过聚合源",
+      "expected": false,
+      "actual": false,
+      "pass": true
+    },
+    {
+      "name": "熔断后仍返回本地结果",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "熔断期间请求标记降级",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "恢复配置后聚合源重新命中",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "冷查询走真实网络（>500ms）",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "二次查询命中缓存（<300ms）",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "缓存命中计数 ≥1",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "冷/热结果一致",
+      "expected": [
+        "闪婚后，傅先生每天都在吃醋",
+        "穿到现代来闪婚",
+        "闪婚 急诊",
+        "闪婚妈妈",
+        "闪婚急诊",
+        "闪婚惊梦"
+      ],
+      "actual": [
+        "闪婚后，傅先生每天都在吃醋",
+        "穿到现代来闪婚",
+        "闪婚 急诊",
+        "闪婚妈妈",
+        "闪婚急诊",
+        "闪婚惊梦"
+      ],
+      "pass": true
+    }
+  ],
+  "direct": [
+    {
+      "query": "闪婚",
+      "ok": true,
+      "count": 5,
+      "latency_ms": 1624.2,
+      "titles": [
+        "闪婚 急诊",
+        "闪婚妈妈",
+        "闪婚惊梦",
+        "闪婚急诊",
+        "穿到现代来闪婚"
+      ],
+      "episodes": [
+        103,
+        66,
+        101,
+        103,
+        100
+      ]
+    },
+    {
+      "query": "重生",
+      "ok": true,
+      "count": 5,
+      "latency_ms": 1623.1,
+      "titles": [
+        "重生2000之我用科技拯救全球",
+        "重生七零再高嫁",
+        "重生七零小辣媳",
+        "重生财阀回到1992",
+        "我竟然重生了5次"
+      ],
+      "episodes": [
+        65,
+        82,
+        100,
+        94,
+        69
+      ]
+    },
+    {
+      "query": "总裁",
+      "ok": true,
+      "count": 5,
+      "latency_ms": 1670.9,
+      "titles": [
+        "替身总裁",
+        "总裁回乡记",
+        "总裁的落跑甜心",
+        "农民家的总裁儿子",
+        "奈何试婚总裁要娶我"
+      ],
+      "episodes": [
+        98,
+        67,
+        100,
+        80,
+        100
+      ]
+    },
+    {
+      "query": "穿越",
+      "ok": true,
+      "count": 5,
+      "latency_ms": 1395.8,
+      "titles": [
+        "穿越异姓王",
+        "穿越后，我成了驸马",
+        "穿越后公主猛追夫",
+        "穿越回古代当反派",
+        "史上最惨穿越者"
+      ],
+      "episodes": [
+        90,
+        98,
+        95,
+        95,
+        45
+      ]
+    }
+  ],
+  "end_to_end": [
+    {
+      "query": "闪婚",
+      "ok": true,
+      "total": 6,
+      "agg_hits": 5,
+      "elapsed_ms": 1722.0,
+      "degraded": false,
+      "fallback_stage": 4,
+      "top": [
+        {
+          "title": "闪婚后，傅先生每天都在吃醋",
+          "platforms": [
+            "hongguo"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": null
+        },
+        {
+          "title": "穿到现代来闪婚",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 100
+        },
+        {
+          "title": "闪婚 急诊",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 103
+        },
+        {
+          "title": "闪婚妈妈",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 66
+        },
+        {
+          "title": "闪婚急诊",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 103
+        }
+      ]
+    },
+    {
+      "query": "重生",
+      "ok": true,
+      "total": 6,
+      "agg_hits": 5,
+      "elapsed_ms": 1701.8,
+      "degraded": false,
+      "fallback_stage": 4,
+      "top": [
+        {
+          "title": "重生之我在豪门当团宠",
+          "platforms": [
+            "hongguo"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": null
+        },
+        {
+          "title": "我竟然重生了5次",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 69
+        },
+        {
+          "title": "重生2000之我用科技拯救全球",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 65
+        },
+        {
+          "title": "重生七零再高嫁",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 82
+        },
+        {
+          "title": "重生七零小辣媳",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 100
+        }
+      ]
+    },
+    {
+      "query": "总裁",
+      "ok": true,
+      "total": 6,
+      "agg_hits": 5,
+      "elapsed_ms": 1634.2,
+      "degraded": false,
+      "fallback_stage": 4,
+      "top": [
+        {
+          "title": "农民家的总裁儿子",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 80
+        },
+        {
+          "title": "奈何试婚总裁要娶我",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 100
+        },
+        {
+          "title": "总裁回乡记",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 67
+        },
+        {
+          "title": "总裁的落跑甜心",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 100
+        },
+        {
+          "title": "替身总裁",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 98
+        }
+      ]
+    },
+    {
+      "query": "穿越",
+      "ok": true,
+      "total": 6,
+      "agg_hits": 5,
+      "elapsed_ms": 1531.8,
+      "degraded": false,
+      "fallback_stage": 4,
+      "top": [
+        {
+          "title": "史上最惨穿越者",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 45
+        },
+        {
+          "title": "穿越后公主猛追夫",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 95
+        },
+        {
+          "title": "穿越后，我成了驸马",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 98
+        },
+        {
+          "title": "穿越回古代当反派",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 95
+        },
+        {
+          "title": "穿越异姓王",
+          "platforms": [
+            "agg_drama"
+          ],
+          "layer": 1,
+          "label": "剧名近似",
+          "episodes": 90
+        }
+      ]
+    }
+  ],
+  "failure": [
+    {
+      "round": 1,
+      "elapsed_ms": 36.1,
+      "degraded": true,
+      "agg_used": true,
+      "results": 1
+    },
+    {
+      "round": 2,
+      "elapsed_ms": 16.7,
+      "degraded": true,
+      "agg_used": true,
+      "results": 1
+    },
+    {
+      "round": 3,
+      "elapsed_ms": 16.7,
+      "degraded": true,
+      "agg_used": true,
+      "results": 1
+    },
+    {
+      "round": 4,
+      "elapsed_ms": 16.4,
+      "degraded": true,
+      "agg_used": false,
+      "results": 1
+    }
+  ],
+  "cache": {
+    "cold_ms": 1395.0,
+    "warm_ms": 17.2,
+    "speedup": 81.0,
+    "stats": {
+      "ttl_s": 30.0,
+      "max_entries": 256,
+      "entries": 1,
+      "hits": 1,
+      "misses": 10,
+      "hit_rate": 0.091,
+      "evictions": 0
+    },
+    "titles": [
+      "闪婚后，傅先生每天都在吃醋",
+      "穿到现代来闪婚",
+      "闪婚 急诊",
+      "闪婚妈妈",
+      "闪婚急诊",
+      "闪婚惊梦"
+    ]
+  }
+}

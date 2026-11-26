@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# 运行时数据（记忆、审计、临时截图缓存）
+data/memory.db
+data/memory.db-*
+data/audit.jsonl
+data/audit.jsonl.*
+docs/experiment/memory.db*
+docs/experiment/*.db-*
+docs/live/memory.db*
+docs/dracin/memory.db*
+docs/dracin/platforms.mock.json
+
+# 本地调试
+.edge*/
+_*.png
+_*.txt
+_*.html

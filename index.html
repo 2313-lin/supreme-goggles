@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>夜航 · 短篇小说 / 短剧搜索</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="logo">夜</span>
+      <div>
+        <h1>夜航 <em>Novelette &amp; Drama Search</em></h1>
+        <p>按主角、原文句子、主题找小说；按剧名、主题、台词找短剧</p>
+      </div>
+    </div>
+    <div class="status" id="healthPill" title="服务状态">
+      <span class="dot"></span><span id="healthText">连接中…</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section class="search-panel">
+      <form id="searchForm" class="search-box" autocomplete="off">
+        <input id="query" name="query" type="search" maxlength="200"
+               placeholder="输入原文句子、主角名、剧名或主题，例如：她说她从来没有恨过我" />
+        <button type="submit" id="searchBtn">搜索</button>
+      </form>
+
+      <div class="search-meta">
+        <div class="tabs" role="tablist" aria-label="搜索范围">
+          <button class="tab active" data-tab="all" role="tab">全部</button>
+          <button class="tab" data-tab="novel" role="tab">短篇小说</button>
+          <button class="tab" data-tab="drama" role="tab">短剧</button>
+        </div>
+        <div class="chips" id="examples"></div>
+      </div>
+    </section>
+
+    <div class="layout">
+      <section class="results" id="results">
+        <div class="welcome">
+          <h2>先找到那句原文，再找到它出处的故事</h2>
+          <p>
+            小说优先番茄小说，短剧优先红果短剧；主源不可用或结果不足时，自动沿
+            <strong>七猫 → 书旗 → 米读/连尚</strong>（小说）、<strong>河马 → 爱看</strong>（短剧）逐级拓展。
+          </p>
+          <ul class="rules">
+            <li><b>短篇小说</b>：原文句子 &gt; 主角 &gt; 主题 &gt; 标题</li>
+            <li><b>短剧</b>：剧名 / 主题 &gt; 台词 &gt; 主角 / 演员</li>
+            <li>句子逐字校验通过的作品直接置顶，并标注证据出处</li>
+          </ul>
+        </div>
+      </section>
+
+      <aside class="side">
+        <section class="panel">
+          <header class="panel-head">
+            <h3>平台状态</h3>
+            <button class="ghost" id="refreshPlatforms" title="刷新">↻</button>
+          </header>
+          <div id="platformList" class="platform-list"></div>
+          <div class="demo-box">
+            <label class="switch">
+              <input type="checkbox" id="demoMode" />
+              <span>演示：可手动停用平台</span>
+            </label>
+            <input id="adminToken" class="token" type="password" value="dev-admin-token"
+                   aria-label="管理员令牌" />
+          </div>
+        </section>
+
+        <section class="panel">
+          <header class="panel-head"><h3>长记忆</h3></header>
+          <div id="memoryBox" class="memory"></div>
+          <div class="blocked-editor">
+            <input id="blockedInput" placeholder="屏蔽主题，逗号分隔" />
+            <button class="ghost" id="saveBlocked">保存</button>
+          </div>
+        </section>
+
+        <section class="panel trace-panel" id="tracePanel" hidden>
+          <header class="panel-head"><h3>检索轨迹</h3></header>
+          <div id="traceBody" class="trace"></div>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <div class="modal" id="modal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="关闭">×</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" hidden></div>
+  <script src="/app.js"></script>
+</body>
+</html>

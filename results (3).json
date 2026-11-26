@@ -1,0 +1,64 @@
+{
+  "redis_url": "redis://127.0.0.1:6399/0",
+  "checks": [
+    {
+      "name": "两实例后端均为 redis",
+      "expected": "redis",
+      "actual": "redis",
+      "pass": true
+    },
+    {
+      "name": "实例 B 后端为 redis",
+      "expected": "redis",
+      "actual": "redis",
+      "pass": true
+    },
+    {
+      "name": "实例 A 冷查询命中 mock",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "name": "mock 被调用 1 次",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "name": "实例 B 结果一致",
+      "expected": 2,
+      "actual": 2,
+      "pass": true
+    },
+    {
+      "name": "实例 B 未再调用 mock（命中共享缓存）",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    },
+    {
+      "name": "实例 B 显著更快",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "实例 B 缓存命中 ≥1",
+      "expected": true,
+      "actual": true,
+      "pass": true
+    },
+    {
+      "name": "Redis 中存在 1 个共享键",
+      "expected": 1,
+      "actual": 1,
+      "pass": true
+    }
+  ],
+  "passed": 9,
+  "total": 9,
+  "mock_calls": 1,
+  "cold_ms": 316.9,
+  "warm_ms": 3.3
+}
